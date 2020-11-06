@@ -40,9 +40,9 @@ import java.io.ByteArrayInputStream;
                 import org.bouncycastle.operator.ContentSigner;
                 import org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 
-public class Pkcs {
+public interface Pkcs {
 
-    private static KeyPair getKey() throws NoSuchAlgorithmException {
+    public static KeyPair getKey() throws NoSuchAlgorithmException {
         KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA",
                 new BouncyCastleProvider());
         generator.initialize(1024);
