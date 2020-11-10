@@ -11,6 +11,7 @@ public class GetPkcs implements Pkcs {
         String issuerStr ="CN=西部CA,OU=研发部,O=gitbook有限公司,C=CN,E=gitbook@sina.com,L=银川,ST=宁夏";
         String subjectStr ="CN=西部CA,OU=研发部,O=gitbook有限公司,C=CN,E=gitbook@sina.com,L=银川,ST=宁夏";
         String certificateCRL="https://www.cwca.com.cn";
+        System.out.println("请输入密码");
         Scanner pwd=new Scanner(System.in);
         String password = pwd.nextLine();
        Map<String,byte[]> result = Pkcs.createCert(password,issuerStr,subjectStr,certificateCRL);
