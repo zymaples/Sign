@@ -14,7 +14,7 @@ public class GetPkcs implements Pkcs {
         System.out.println("请输入密码");
         Scanner pwd=new Scanner(System.in);
         String password = pwd.nextLine();
-       Map<String,byte[]> result = Pkcs.createCert(password,issuerStr,subjectStr,certificateCRL);
+        Map<String,byte[]> result = Pkcs.createCert(password,issuerStr,subjectStr,certificateCRL);
         FileOutputStream outPutStream = new FileOutputStream("E:/CWCA/Sign/file/keystore.p12"); // ca.jks
         outPutStream.write(result.get("keyStoreData"));
         outPutStream.close();
