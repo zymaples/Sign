@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class GetPkcs implements Pkcs {
     public static void main(String[] args) throws Exception{
+        //测试证书
         String issuerStr ="CN=西部CA,OU=研发部,O=gitbook有限公司,C=CN,E=gitbook@sina.com,L=银川,ST=宁夏";
         String subjectStr ="CN=西部CA,OU=研发部,O=gitbook有限公司,C=CN,E=gitbook@sina.com,L=银川,ST=宁夏";
         String certificateCRL="https://www.cwca.com.cn";
